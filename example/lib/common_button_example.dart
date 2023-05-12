@@ -67,14 +67,14 @@ class CommonButtonExample extends StatelessWidget {
               const CommonOutlinedButton(
                 onSubmit: null,
                 fgColor: Colors.red,
-                child: Text('Click Outlined button'),
+                child: Text('Can\'t Click Disabled Outlined button'),
               ),
               15.vGap,
               CommonOutlinedButton(
                 onSubmit: () {},
                 isLoading: true,
                 fgColor: Colors.pink,
-                child: Text('Click Outlined button'),
+                child: const Text('Click Outlined button'),
               ),
             ],
           ),

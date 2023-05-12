@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+//for iPhones, status bar will not black
 class CommonSafeArea extends StatelessWidget {
   const CommonSafeArea({
     super.key,
