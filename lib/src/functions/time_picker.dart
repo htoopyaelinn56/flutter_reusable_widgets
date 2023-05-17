@@ -12,7 +12,6 @@ Future<TimeOfDay?> commonTimePicker({
     int minute = int.parse(
         use24HourFormat ? list[1] : list[1].substring(0, list[1].length - 2));
     timeOfDay = TimeOfDay(hour: hour, minute: minute);
-    print(timeOfDay);
   }
   final pick = showTimePicker(
       context: context,
