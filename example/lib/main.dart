@@ -1,3 +1,4 @@
+import 'package:example/date_picker_example.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_reusable_widgets/flutter_reusable_widgets.dart';
 
@@ -51,6 +52,15 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: const Text('Buttons'),
+              ),
+              CommonButton(
+                onSubmit: () {
+                  pagePusher(
+                    context,
+                    const DateTimePickerExample(),
+                  );
+                },
+                child: const Text('Date Time Picker Example'),
               ),
             ],
           ),

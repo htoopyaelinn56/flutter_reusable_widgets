@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_reusable_widgets/flutter_reusable_widgets.dart';
-import 'package:flutter_reusable_widgets/src/extensions/gap.dart';
 import 'constants.dart';
 
 class CommonButtonExample extends StatelessWidget {

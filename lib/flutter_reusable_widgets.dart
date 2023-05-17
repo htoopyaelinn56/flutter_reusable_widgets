@@ -5,6 +5,8 @@ export 'src/extensions/gap.dart';
 
 //functions
 export 'src/functions/page_push.dart';
+export 'src/functions/date_picker.dart';
+export 'src/functions/time_picker.dart';
 
 //widgets
 export 'src/widgets/common_button.dart';
