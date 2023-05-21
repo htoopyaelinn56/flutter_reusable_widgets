@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-Future<DateTime> commonDatePicker({
+Future<DateTime> pickDate({
   required BuildContext context,
-  required String pickedDate,
-  int startDate = 1920,
-  int endDate = 3000,
+  String pickedDate = '',
+  int startYear = 1920,
+  int endYear = 3000,
 }) async {
   DateTime? date;
   if (pickedDate.isNotEmpty) {
@@ -15,9 +15,9 @@ Future<DateTime> commonDatePicker({
     context: context,
     initialEntryMode: DatePickerEntryMode.calendar,
     initialDate: pickedDate.isEmpty ? DateTime.now() : date!,
-    firstDate: DateTime(startDate),
+    firstDate: DateTime(startYear),
     lastDate: DateTime(
-      endDate,
+      endYear,
     ),
     builder: (context, child) {
       return child!;

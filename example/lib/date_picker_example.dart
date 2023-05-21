@@ -29,8 +29,7 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
               children: [
                 CommonButton(
                   onSubmit: () async {
-                    final date = await commonDatePicker(
-                        context: context, pickedDate: _date);
+                    final date = await pickDate(context: context, pickedDate: _date);
                     _date = date.toString().substring(0, 10);
                     setState(() {});
                   },
@@ -43,15 +42,12 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
                   children: [
                     CommonOutlinedButton(
                       onSubmit: () async {
-                        final date = await commonDatePicker(
-                            context: context, pickedDate: '');
+                        final date = await pickDate(context: context, pickedDate: '');
                         _date = date.toString().substring(0, 10);
                         setState(() {});
                       },
                       child: Text(
-                        _date.isEmpty
-                            ? 'You don\'t want your lastest picked date'
-                            : _date,
+                        _date.isEmpty ? 'You don\'t want your lastest picked date' : _date,
                       ),
                     ),
                   ],
@@ -64,33 +60,23 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
               children: [
                 CommonButton(
                   onSubmit: () async {
-                    final time = await commonTimePicker(
-                        context: context,
-                        pickedTime: _time12HourFormat,
-                        use24HourFormat: false);
+                    final time = await pickTime(context: context, pickedTime: _time12HourFormat, use24HourFormat: false);
                     _time12HourFormat = time!.format(context);
                     setState(() {});
                   },
                   child: Text(
-                    _time12HourFormat.isEmpty
-                        ? 'Time Picker 12 hr format'
-                        : _time12HourFormat,
+                    _time12HourFormat.isEmpty ? 'Time Picker 12 hr format' : _time12HourFormat,
                   ),
                 ),
                 15.hGap,
                 CommonOutlinedButton(
                   onSubmit: () async {
-                    final time = await commonTimePicker(
-                        context: context,
-                        pickedTime: '',
-                        use24HourFormat: false);
+                    final time = await pickTime(context: context, pickedTime: '', use24HourFormat: false);
                     _time12HourFormat = time!.format(context);
                     setState(() {});
                   },
                   child: Text(
-                    _time12HourFormat.isEmpty
-                        ? 'You don\'t want your latest picked time'
-                        : _time12HourFormat,
+                    _time12HourFormat.isEmpty ? 'You don\'t want your latest picked time' : _time12HourFormat,
                   ),
                 ),
               ],
@@ -98,15 +84,12 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
             15.vGap,
             CommonOutlinedButton(
               onSubmit: () async {
-                final time = await commonTimePicker(
-                    context: context, pickedTime: _time24HourFormat);
+                final time = await pickTime(context: context, pickedTime: _time24HourFormat);
                 _time24HourFormat = time.toString().substring(10, 15);
                 setState(() {});
               },
               child: Text(
-                _time24HourFormat.isEmpty
-                    ? 'Time Picker 24 hr format'
-                    : _time24HourFormat,
+                _time24HourFormat.isEmpty ? 'Time Picker 24 hr format' : _time24HourFormat,
               ),
             ),
           ],
