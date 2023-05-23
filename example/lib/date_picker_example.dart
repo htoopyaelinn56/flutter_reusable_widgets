@@ -61,7 +61,7 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
                 CommonButton(
                   onSubmit: () async {
                     final time = await pickTime(context: context, pickedTime: _time12HourFormat, use24HourFormat: false);
-                    _time12HourFormat = time!.format(context);
+                    if (mounted) _time12HourFormat = time!.format(context);
                     setState(() {});
                   },
                   child: Text(
@@ -72,7 +72,7 @@ class _DateTimePickerExampleState extends State<DateTimePickerExample> {
                 CommonOutlinedButton(
                   onSubmit: () async {
                     final time = await pickTime(context: context, pickedTime: '', use24HourFormat: false);
-                    _time12HourFormat = time!.format(context);
+                    if (mounted) _time12HourFormat = time!.format(context);
                     setState(() {});
                   },
                   child: Text(
